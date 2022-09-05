@@ -78,43 +78,43 @@ wm = WeChatMessage(client)
 area, week, weather, real, lowest, highest, wind, windsc, sunrise, sunset, pop, tips = get_weather1()
 data = {
     "date1": {
-        'value':'今天是：'
+        'value':'📅今天是：'
     },
     "city1": {
-        'value':'城市：'
+        'value':'🌎城市：'
     },
     "tq": {
-        "value":'今天天气：'
+        "value":'☁️今天天气：'
     },
     "wind_windsc": {
-        "value":'风向风速：'
+        "value":'💨风向风速：'
     },
     "temperature1": {
-        'value':'当前温度：'
+        'value':'♎️今日运势：'
     },
     "lowest1": {
-        'value':'今日最低温：'
+        'value':'🌑最低气温：'
     },
     "highest1": {
-        'value':'今日最高温：'
+        'value':'☀最高气温：'
     },
     "sunrise1": {
-        'value':'日出时间：'
+        'value':'🌤日出时间：'
     },
     "sunset1": {
-        'value':'日落时间：'
+        'value':'🌥日落时间：'
     },
     "pop1": {
-        'value':'降雨概率：'
+        'value':'💧降雨概率：'
     },
     "tips1": {
         "value":'穿衣建议：'
     },
     "love_days1": {
-        'value':'今天是我们恋爱的第'
+        'value':'🔔今天是我们恋爱的第'
     },
     "birthday_left1": {
-      "value":'距离仟仟的生日还有'
+      "value":'🎂距离仟仟的生日还有'
     },
     # "birthday_left": {
     #     "value":get_birthday(),
