@@ -201,7 +201,8 @@ data = {
     },
 }
 count = 0
+url="https://lab.magiconch.com/sakana/?v=takina"
 for user_id in user_ids:
-  res = wm.send_template(user_id, template_id, data)
+  res = wm.send_template(user_id, template_id, data,url)
   count+=1
 print("发送了" + str(count) + "条消息")
