@@ -51,6 +51,15 @@ def get_words1():
     return get_words1()
   return words1.json()['data']['text']
 
+def get_xingzuo():
+  url = "http://api.tianapi.com/star/index?key=d5edced4967c76fd11899dbe1b753d91&astro=天秤座"
+  xingzuo = requests.get(url,verify=False)
+  if xingzuo.status_code != 200:
+    return get_xingzuo()
+  data = xingzuo.json()
+  data = "今天的幸运颜色："+str(data['newslist'][5]["content"])+"\n天秤座的你今日爱情指数："+str(data['newslist'][1]["content"])+"\n速配星座："+str(data['newslist'][7]["content"])+"\n财运指数："+str(data['newslist'][3]["content"])+"\n今天的你："+str(data['newslist'][8]["content"])
+  return data
+
 #随机颜色1
 # def get_random_color():
 #   return "#%06x" % random.randint(0, 0xFFFFFF)
@@ -197,6 +206,14 @@ data = {
     #随机情话
     "words": {
         "value":get_words(),
+        "color":get_random_color()
+    },
+    "xingzuo": {
+        "value":get_xingzuo(),
+        "color":get_random_color()
+    },
+      "words1": {
+        "value":get_words1(),
         "color":get_random_color()
     },
 }
